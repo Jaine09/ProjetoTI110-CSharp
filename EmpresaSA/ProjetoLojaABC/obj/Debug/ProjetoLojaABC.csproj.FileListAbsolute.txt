@@ -1,0 +1,12 @@
+C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\EmpresaSA\ProjetoLojaABC\bin\Debug\ProjetoLojaABC.exe.config
+C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\EmpresaSA\ProjetoLojaABC\bin\Debug\ProjetoLojaABC.exe
+C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\EmpresaSA\ProjetoLojaABC\bin\Debug\ProjetoLojaABC.pdb
+C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\EmpresaSA\ProjetoLojaABC\obj\Debug\ProjetoLojaABC.csproj.AssemblyReference.cache
+C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\EmpresaSA\ProjetoLojaABC\obj\Debug\ProjetoLojaABC.frmSplash.resources
+C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\EmpresaSA\ProjetoLojaABC\obj\Debug\ProjetoLojaABC.Properties.Resources.resources
+C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\EmpresaSA\ProjetoLojaABC\obj\Debug\ProjetoLojaABC.csproj.GenerateResource.cache
+C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\EmpresaSA\ProjetoLojaABC\obj\Debug\ProjetoLojaABC.csproj.CoreCompileInputs.cache
+C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\EmpresaSA\ProjetoLojaABC\obj\Debug\ProjetoLojaABC.exe
+C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\EmpresaSA\ProjetoLojaABC\obj\Debug\ProjetoLojaABC.pdb
+C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\EmpresaSA\ProjetoLojaABC\obj\Debug\ProjetoLojaABC.frmLogin.resources
+C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\EmpresaSA\ProjetoLojaABC\obj\Debug\ProjetoLojaABC.frmMenuPrincipal.resources
