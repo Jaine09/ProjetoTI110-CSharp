@@ -10,3 +10,4 @@ C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\EmpresaSA\Projet
 C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\EmpresaSA\ProjetoLojaABC\obj\Debug\ProjetoLojaABC.pdb
 C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\EmpresaSA\ProjetoLojaABC\obj\Debug\ProjetoLojaABC.frmLogin.resources
 C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\EmpresaSA\ProjetoLojaABC\obj\Debug\ProjetoLojaABC.frmMenuPrincipal.resources
+C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\EmpresaSA\ProjetoLojaABC\obj\Debug\ProjetoLojaABC.frmCalculadora.resources
