@@ -74,9 +74,9 @@ namespace ProjetoLojaABC
             this.gpbOperacoes.Controls.Add(this.rdbSubtracao);
             this.gpbOperacoes.Controls.Add(this.rdbAdicao);
             this.gpbOperacoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpbOperacoes.Location = new System.Drawing.Point(312, 224);
+            this.gpbOperacoes.Location = new System.Drawing.Point(338, 224);
             this.gpbOperacoes.Name = "gpbOperacoes";
-            this.gpbOperacoes.Size = new System.Drawing.Size(205, 169);
+            this.gpbOperacoes.Size = new System.Drawing.Size(173, 169);
             this.gpbOperacoes.TabIndex = 3;
             this.gpbOperacoes.TabStop = false;
             this.gpbOperacoes.Text = "Operações";
@@ -129,7 +129,7 @@ namespace ProjetoLojaABC
             // 
             this.lblResultado.AutoSize = true;
             this.lblResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResultado.Location = new System.Drawing.Point(724, 67);
+            this.lblResultado.Location = new System.Drawing.Point(644, 75);
             this.lblResultado.Name = "lblResultado";
             this.lblResultado.Size = new System.Drawing.Size(82, 20);
             this.lblResultado.TabIndex = 8;
@@ -138,7 +138,7 @@ namespace ProjetoLojaABC
             // lblTotal
             // 
             this.lblTotal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblTotal.Location = new System.Drawing.Point(690, 110);
+            this.lblTotal.Location = new System.Drawing.Point(648, 109);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(158, 64);
             this.lblTotal.TabIndex = 0;
@@ -167,6 +167,7 @@ namespace ProjetoLojaABC
             this.btnLimpar.TabIndex = 9;
             this.btnLimpar.Text = "&Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnSair
             // 
