@@ -31,36 +31,36 @@ namespace ProjetoLojaABC
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFuncionarios));
             this.gpbFuncionario = new System.Windows.Forms.GroupBox();
-            this.lblCodigo = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.lblNome = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.lblCPF = new System.Windows.Forms.Label();
-            this.mskCPF = new System.Windows.Forms.MaskedTextBox();
-            this.lblDNasc = new System.Windows.Forms.Label();
-            this.dtpDNasc = new System.Windows.Forms.DateTimePicker();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.lblEndereco = new System.Windows.Forms.Label();
-            this.txtEndereco = new System.Windows.Forms.TextBox();
-            this.mskCEP = new System.Windows.Forms.MaskedTextBox();
-            this.lblCEP = new System.Windows.Forms.Label();
+            this.txtBairro = new System.Windows.Forms.TextBox();
+            this.lblBairro = new System.Windows.Forms.Label();
+            this.cbbEstado = new System.Windows.Forms.ComboBox();
+            this.lblEstado = new System.Windows.Forms.Label();
+            this.txtCidade = new System.Windows.Forms.TextBox();
+            this.lblCidade = new System.Windows.Forms.Label();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.lblNumero = new System.Windows.Forms.Label();
-            this.lblCidade = new System.Windows.Forms.Label();
-            this.txtCidade = new System.Windows.Forms.TextBox();
-            this.lblEstado = new System.Windows.Forms.Label();
-            this.cbbEstado = new System.Windows.Forms.ComboBox();
-            this.lblBairro = new System.Windows.Forms.Label();
-            this.txtBairro = new System.Windows.Forms.TextBox();
+            this.lblCEP = new System.Windows.Forms.Label();
+            this.mskCEP = new System.Windows.Forms.MaskedTextBox();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
+            this.lblEndereco = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.dtpDNasc = new System.Windows.Forms.DateTimePicker();
+            this.lblDNasc = new System.Windows.Forms.Label();
+            this.mskCPF = new System.Windows.Forms.MaskedTextBox();
+            this.lblCPF = new System.Windows.Forms.Label();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.lblCodigo = new System.Windows.Forms.Label();
             this.pnlCRUD = new System.Windows.Forms.Panel();
-            this.btnNovo = new System.Windows.Forms.Button();
-            this.btnCadastrar = new System.Windows.Forms.Button();
-            this.btnAlterar = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnPesquisar = new System.Windows.Forms.Button();
-            this.btnLimpar = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btnNovo = new System.Windows.Forms.Button();
             this.gpbFuncionario.SuspendLayout();
             this.pnlCRUD.SuspendLayout();
             this.SuspendLayout();
@@ -98,124 +98,62 @@ namespace ProjetoLojaABC
             this.gpbFuncionario.Text = "Dados";
             this.gpbFuncionario.Enter += new System.EventHandler(this.gpbFuncionario_Enter);
             // 
-            // lblCodigo
+            // txtBairro
             // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(7, 38);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(56, 18);
-            this.lblCodigo.TabIndex = 0;
-            this.lblCodigo.Text = "Código";
+            this.txtBairro.Location = new System.Drawing.Point(195, 200);
+            this.txtBairro.MaxLength = 100;
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(132, 24);
+            this.txtBairro.TabIndex = 9;
             // 
-            // txtCodigo
+            // lblBairro
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(69, 32);
-            this.txtCodigo.MaxLength = 5;
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(100, 24);
-            this.txtCodigo.TabIndex = 1;
+            this.lblBairro.AutoSize = true;
+            this.lblBairro.Location = new System.Drawing.Point(141, 200);
+            this.lblBairro.Name = "lblBairro";
+            this.lblBairro.Size = new System.Drawing.Size(48, 18);
+            this.lblBairro.TabIndex = 20;
+            this.lblBairro.Text = "Bairro";
             // 
-            // lblNome
+            // cbbEstado
             // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(7, 89);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(49, 18);
-            this.lblNome.TabIndex = 2;
-            this.lblNome.Text = "Nome";
+            this.cbbEstado.FormattingEnabled = true;
+            this.cbbEstado.Items.AddRange(new object[] {
+            "SP",
+            "RJ",
+            "ES",
+            "BA",
+            "MG"});
+            this.cbbEstado.Location = new System.Drawing.Point(670, 198);
+            this.cbbEstado.Name = "cbbEstado";
+            this.cbbEstado.Size = new System.Drawing.Size(64, 26);
+            this.cbbEstado.TabIndex = 11;
             // 
-            // txtNome
+            // lblEstado
             // 
-            this.txtNome.Location = new System.Drawing.Point(62, 83);
-            this.txtNome.MaxLength = 100;
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(240, 24);
-            this.txtNome.TabIndex = 2;
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Location = new System.Drawing.Point(605, 200);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(55, 18);
+            this.lblEstado.TabIndex = 18;
+            this.lblEstado.Text = "Estado";
             // 
-            // lblCPF
+            // txtCidade
             // 
-            this.lblCPF.AutoSize = true;
-            this.lblCPF.Location = new System.Drawing.Point(609, 86);
-            this.lblCPF.Name = "lblCPF";
-            this.lblCPF.Size = new System.Drawing.Size(38, 18);
-            this.lblCPF.TabIndex = 4;
-            this.lblCPF.Text = "CPF";
+            this.txtCidade.Location = new System.Drawing.Point(393, 200);
+            this.txtCidade.MaxLength = 100;
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(190, 24);
+            this.txtCidade.TabIndex = 10;
             // 
-            // mskCPF
+            // lblCidade
             // 
-            this.mskCPF.Location = new System.Drawing.Point(653, 80);
-            this.mskCPF.Mask = "999,999,999-99";
-            this.mskCPF.Name = "mskCPF";
-            this.mskCPF.Size = new System.Drawing.Size(108, 24);
-            this.mskCPF.TabIndex = 4;
-            // 
-            // lblDNasc
-            // 
-            this.lblDNasc.AutoSize = true;
-            this.lblDNasc.Location = new System.Drawing.Point(7, 144);
-            this.lblDNasc.Name = "lblDNasc";
-            this.lblDNasc.Size = new System.Drawing.Size(143, 18);
-            this.lblDNasc.TabIndex = 6;
-            this.lblDNasc.Text = "Data de Nascimento";
-            // 
-            // dtpDNasc
-            // 
-            this.dtpDNasc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDNasc.Location = new System.Drawing.Point(159, 138);
-            this.dtpDNasc.Name = "dtpDNasc";
-            this.dtpDNasc.Size = new System.Drawing.Size(93, 24);
-            this.dtpDNasc.TabIndex = 5;
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(315, 89);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(50, 18);
-            this.lblEmail.TabIndex = 8;
-            this.lblEmail.Text = "E-mail";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(371, 83);
-            this.txtEmail.MaxLength = 100;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(232, 24);
-            this.txtEmail.TabIndex = 3;
-            // 
-            // lblEndereco
-            // 
-            this.lblEndereco.AutoSize = true;
-            this.lblEndereco.Location = new System.Drawing.Point(293, 144);
-            this.lblEndereco.Name = "lblEndereco";
-            this.lblEndereco.Size = new System.Drawing.Size(72, 18);
-            this.lblEndereco.TabIndex = 10;
-            this.lblEndereco.Text = "Endereço";
-            // 
-            // txtEndereco
-            // 
-            this.txtEndereco.Location = new System.Drawing.Point(371, 138);
-            this.txtEndereco.MaxLength = 100;
-            this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(217, 24);
-            this.txtEndereco.TabIndex = 6;
-            // 
-            // mskCEP
-            // 
-            this.mskCEP.Location = new System.Drawing.Point(653, 137);
-            this.mskCEP.Mask = "99999-999";
-            this.mskCEP.Name = "mskCEP";
-            this.mskCEP.Size = new System.Drawing.Size(81, 24);
-            this.mskCEP.TabIndex = 7;
-            // 
-            // lblCEP
-            // 
-            this.lblCEP.AutoSize = true;
-            this.lblCEP.Location = new System.Drawing.Point(609, 143);
-            this.lblCEP.Name = "lblCEP";
-            this.lblCEP.Size = new System.Drawing.Size(39, 18);
-            this.lblCEP.TabIndex = 13;
-            this.lblCEP.Text = "CEP";
+            this.lblCidade.AutoSize = true;
+            this.lblCidade.Location = new System.Drawing.Point(333, 200);
+            this.lblCidade.Name = "lblCidade";
+            this.lblCidade.Size = new System.Drawing.Size(54, 18);
+            this.lblCidade.TabIndex = 16;
+            this.lblCidade.Text = "Cidade";
             // 
             // txtNumero
             // 
@@ -234,62 +172,124 @@ namespace ProjetoLojaABC
             this.lblNumero.TabIndex = 14;
             this.lblNumero.Text = "Número";
             // 
-            // lblCidade
+            // lblCEP
             // 
-            this.lblCidade.AutoSize = true;
-            this.lblCidade.Location = new System.Drawing.Point(333, 200);
-            this.lblCidade.Name = "lblCidade";
-            this.lblCidade.Size = new System.Drawing.Size(54, 18);
-            this.lblCidade.TabIndex = 16;
-            this.lblCidade.Text = "Cidade";
+            this.lblCEP.AutoSize = true;
+            this.lblCEP.Location = new System.Drawing.Point(609, 143);
+            this.lblCEP.Name = "lblCEP";
+            this.lblCEP.Size = new System.Drawing.Size(39, 18);
+            this.lblCEP.TabIndex = 13;
+            this.lblCEP.Text = "CEP";
             // 
-            // txtCidade
+            // mskCEP
             // 
-            this.txtCidade.Location = new System.Drawing.Point(393, 200);
-            this.txtCidade.MaxLength = 100;
-            this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(190, 24);
-            this.txtCidade.TabIndex = 10;
+            this.mskCEP.Location = new System.Drawing.Point(653, 137);
+            this.mskCEP.Mask = "99999-999";
+            this.mskCEP.Name = "mskCEP";
+            this.mskCEP.Size = new System.Drawing.Size(81, 24);
+            this.mskCEP.TabIndex = 7;
             // 
-            // lblEstado
+            // txtEndereco
             // 
-            this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(605, 200);
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(55, 18);
-            this.lblEstado.TabIndex = 18;
-            this.lblEstado.Text = "Estado";
+            this.txtEndereco.Location = new System.Drawing.Point(371, 138);
+            this.txtEndereco.MaxLength = 100;
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(217, 24);
+            this.txtEndereco.TabIndex = 6;
             // 
-            // cbbEstado
+            // lblEndereco
             // 
-            this.cbbEstado.FormattingEnabled = true;
-            this.cbbEstado.Items.AddRange(new object[] {
-            "SP",
-            "RJ",
-            "ES",
-            "BA",
-            "MG"});
-            this.cbbEstado.Location = new System.Drawing.Point(670, 198);
-            this.cbbEstado.Name = "cbbEstado";
-            this.cbbEstado.Size = new System.Drawing.Size(64, 26);
-            this.cbbEstado.TabIndex = 11;
+            this.lblEndereco.AutoSize = true;
+            this.lblEndereco.Location = new System.Drawing.Point(293, 144);
+            this.lblEndereco.Name = "lblEndereco";
+            this.lblEndereco.Size = new System.Drawing.Size(72, 18);
+            this.lblEndereco.TabIndex = 10;
+            this.lblEndereco.Text = "Endereço";
             // 
-            // lblBairro
+            // txtEmail
             // 
-            this.lblBairro.AutoSize = true;
-            this.lblBairro.Location = new System.Drawing.Point(141, 200);
-            this.lblBairro.Name = "lblBairro";
-            this.lblBairro.Size = new System.Drawing.Size(48, 18);
-            this.lblBairro.TabIndex = 20;
-            this.lblBairro.Text = "Bairro";
+            this.txtEmail.Location = new System.Drawing.Point(371, 83);
+            this.txtEmail.MaxLength = 100;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(232, 24);
+            this.txtEmail.TabIndex = 3;
             // 
-            // txtBairro
+            // lblEmail
             // 
-            this.txtBairro.Location = new System.Drawing.Point(195, 200);
-            this.txtBairro.MaxLength = 100;
-            this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(132, 24);
-            this.txtBairro.TabIndex = 9;
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(315, 89);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(50, 18);
+            this.lblEmail.TabIndex = 8;
+            this.lblEmail.Text = "E-mail";
+            // 
+            // dtpDNasc
+            // 
+            this.dtpDNasc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDNasc.Location = new System.Drawing.Point(159, 138);
+            this.dtpDNasc.Name = "dtpDNasc";
+            this.dtpDNasc.Size = new System.Drawing.Size(93, 24);
+            this.dtpDNasc.TabIndex = 5;
+            // 
+            // lblDNasc
+            // 
+            this.lblDNasc.AutoSize = true;
+            this.lblDNasc.Location = new System.Drawing.Point(7, 144);
+            this.lblDNasc.Name = "lblDNasc";
+            this.lblDNasc.Size = new System.Drawing.Size(143, 18);
+            this.lblDNasc.TabIndex = 6;
+            this.lblDNasc.Text = "Data de Nascimento";
+            // 
+            // mskCPF
+            // 
+            this.mskCPF.Location = new System.Drawing.Point(653, 80);
+            this.mskCPF.Mask = "999,999,999-99";
+            this.mskCPF.Name = "mskCPF";
+            this.mskCPF.Size = new System.Drawing.Size(108, 24);
+            this.mskCPF.TabIndex = 4;
+            // 
+            // lblCPF
+            // 
+            this.lblCPF.AutoSize = true;
+            this.lblCPF.Location = new System.Drawing.Point(609, 86);
+            this.lblCPF.Name = "lblCPF";
+            this.lblCPF.Size = new System.Drawing.Size(38, 18);
+            this.lblCPF.TabIndex = 4;
+            this.lblCPF.Text = "CPF";
+            // 
+            // txtNome
+            // 
+            this.txtNome.Location = new System.Drawing.Point(62, 83);
+            this.txtNome.MaxLength = 100;
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(240, 24);
+            this.txtNome.TabIndex = 2;
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Location = new System.Drawing.Point(7, 89);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(49, 18);
+            this.lblNome.TabIndex = 2;
+            this.lblNome.Text = "Nome";
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(69, 32);
+            this.txtCodigo.MaxLength = 5;
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(100, 24);
+            this.txtCodigo.TabIndex = 1;
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Location = new System.Drawing.Point(7, 38);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(56, 18);
+            this.lblCodigo.TabIndex = 0;
+            this.lblCodigo.Text = "Código";
             // 
             // pnlCRUD
             // 
@@ -306,21 +306,77 @@ namespace ProjetoLojaABC
             this.pnlCRUD.Size = new System.Drawing.Size(785, 69);
             this.pnlCRUD.TabIndex = 12;
             // 
-            // btnNovo
+            // btnVoltar
             // 
-            this.btnNovo.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnNovo.Image = ((System.Drawing.Image)(resources.GetObject("btnNovo.Image")));
-            this.btnNovo.Location = new System.Drawing.Point(7, 13);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(105, 41);
-            this.btnNovo.TabIndex = 13;
-            this.btnNovo.Text = "&Novo";
-            this.btnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNovo.UseVisualStyleBackColor = false;
+            this.btnVoltar.BackColor = System.Drawing.Color.MistyRose;
+            this.btnVoltar.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltar.Image")));
+            this.btnVoltar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVoltar.Location = new System.Drawing.Point(673, 13);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(105, 41);
+            this.btnVoltar.TabIndex = 19;
+            this.btnVoltar.Text = "&Voltar";
+            this.btnVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.BackColor = System.Drawing.Color.MistyRose;
+            this.btnLimpar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpar.Image")));
+            this.btnLimpar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimpar.Location = new System.Drawing.Point(562, 13);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(105, 41);
+            this.btnLimpar.TabIndex = 18;
+            this.btnLimpar.Text = "&Limpar";
+            this.btnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.BackColor = System.Drawing.Color.MistyRose;
+            this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
+            this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPesquisar.Location = new System.Drawing.Point(451, 13);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(105, 41);
+            this.btnPesquisar.TabIndex = 17;
+            this.btnPesquisar.Text = "&Pesquisar";
+            this.btnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPesquisar.UseVisualStyleBackColor = false;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.BackColor = System.Drawing.Color.MistyRose;
+            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
+            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExcluir.Location = new System.Drawing.Point(340, 14);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(105, 41);
+            this.btnExcluir.TabIndex = 16;
+            this.btnExcluir.Text = "&Excluir";
+            this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.BackColor = System.Drawing.Color.MistyRose;
+            this.btnAlterar.Image = ((System.Drawing.Image)(resources.GetObject("btnAlterar.Image")));
+            this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAlterar.Location = new System.Drawing.Point(229, 13);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(105, 41);
+            this.btnAlterar.TabIndex = 15;
+            this.btnAlterar.Text = "&Alterar";
+            this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAlterar.UseVisualStyleBackColor = false;
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnCadastrar.BackColor = System.Drawing.Color.MistyRose;
             this.btnCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrar.Image")));
             this.btnCadastrar.Location = new System.Drawing.Point(118, 13);
             this.btnCadastrar.Name = "btnCadastrar";
@@ -330,67 +386,21 @@ namespace ProjetoLojaABC
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
-            // btnAlterar
+            // btnNovo
             // 
-            this.btnAlterar.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnAlterar.Image = ((System.Drawing.Image)(resources.GetObject("btnAlterar.Image")));
-            this.btnAlterar.Location = new System.Drawing.Point(229, 13);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(105, 41);
-            this.btnAlterar.TabIndex = 15;
-            this.btnAlterar.Text = "&Alterar";
-            this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAlterar.UseVisualStyleBackColor = false;
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
-            this.btnExcluir.Location = new System.Drawing.Point(340, 14);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(105, 41);
-            this.btnExcluir.TabIndex = 16;
-            this.btnExcluir.Text = "&Excluir";
-            this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnExcluir.UseVisualStyleBackColor = false;
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
-            this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPesquisar.Location = new System.Drawing.Point(451, 13);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(105, 41);
-            this.btnPesquisar.TabIndex = 17;
-            this.btnPesquisar.Text = "&Pesquisar";
-            this.btnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPesquisar.UseVisualStyleBackColor = false;
-            // 
-            // btnLimpar
-            // 
-            this.btnLimpar.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnLimpar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpar.Image")));
-            this.btnLimpar.Location = new System.Drawing.Point(562, 13);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(105, 41);
-            this.btnLimpar.TabIndex = 18;
-            this.btnLimpar.Text = "&Limpar";
-            this.btnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLimpar.UseVisualStyleBackColor = false;
-            // 
-            // btnVoltar
-            // 
-            this.btnVoltar.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnVoltar.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltar.Image")));
-            this.btnVoltar.Location = new System.Drawing.Point(673, 13);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(105, 41);
-            this.btnVoltar.TabIndex = 19;
-            this.btnVoltar.Text = "&Voltar";
-            this.btnVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnNovo.BackColor = System.Drawing.Color.MistyRose;
+            this.btnNovo.Image = ((System.Drawing.Image)(resources.GetObject("btnNovo.Image")));
+            this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNovo.Location = new System.Drawing.Point(7, 13);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(105, 41);
+            this.btnNovo.TabIndex = 13;
+            this.btnNovo.Text = "&Novo";
+            this.btnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNovo.UseVisualStyleBackColor = false;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // frmFuncionarios
             // 
@@ -404,7 +414,8 @@ namespace ProjetoLojaABC
             this.MaximizeBox = false;
             this.Name = "frmFuncionarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "S";
+            this.Text = "LojaABC - Funcionários";
+            this.Load += new System.EventHandler(this.frmFuncionarios_Load);
             this.gpbFuncionario.ResumeLayout(false);
             this.gpbFuncionario.PerformLayout();
             this.pnlCRUD.ResumeLayout(false);

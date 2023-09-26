@@ -77,6 +77,7 @@ namespace ProjetoLojaABC
             this.Name = "frmSplash";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LojaABC - Splash";
+            this.Load += new System.EventHandler(this.frmSplash_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pcbSplash)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
