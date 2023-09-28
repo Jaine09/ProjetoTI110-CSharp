@@ -101,6 +101,7 @@ namespace ProjetoLojaABC
             this.ltbPesquisar.Name = "ltbPesquisar";
             this.ltbPesquisar.Size = new System.Drawing.Size(588, 160);
             this.ltbPesquisar.TabIndex = 6;
+            this.ltbPesquisar.SelectedIndexChanged += new System.EventHandler(this.ltbPesquisar_SelectedIndexChanged);
             // 
             // btnPesquisar
             // 
