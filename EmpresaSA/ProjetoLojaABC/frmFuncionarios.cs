@@ -11,7 +11,6 @@ using System.Runtime.InteropServices;
 using MySql.Data.MySqlClient;
 
 
-
 namespace ProjetoLojaABC
 {
     public partial class frmFuncionarios : Form
