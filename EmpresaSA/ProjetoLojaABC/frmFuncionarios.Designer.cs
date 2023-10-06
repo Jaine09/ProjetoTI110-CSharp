@@ -71,9 +71,9 @@ namespace ProjetoLojaABC
             this.gpbFuncionario.Controls.Add(this.txtBairro);
             this.gpbFuncionario.Controls.Add(this.lblBairro);
             this.gpbFuncionario.Controls.Add(this.cbbEstado);
-            this.gpbFuncionario.Controls.Add(this.lblEstado);
             this.gpbFuncionario.Controls.Add(this.txtCidade);
             this.gpbFuncionario.Controls.Add(this.lblCidade);
+            this.gpbFuncionario.Controls.Add(this.lblEstado);
             this.gpbFuncionario.Controls.Add(this.txtNumero);
             this.gpbFuncionario.Controls.Add(this.lblNumero);
             this.gpbFuncionario.Controls.Add(this.lblCEP);
@@ -125,15 +125,15 @@ namespace ProjetoLojaABC
             "ES",
             "BA",
             "MG"});
-            this.cbbEstado.Location = new System.Drawing.Point(670, 198);
+            this.cbbEstado.Location = new System.Drawing.Point(426, 200);
             this.cbbEstado.Name = "cbbEstado";
             this.cbbEstado.Size = new System.Drawing.Size(64, 26);
-            this.cbbEstado.TabIndex = 11;
+            this.cbbEstado.TabIndex = 10;
             // 
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(605, 200);
+            this.lblEstado.Location = new System.Drawing.Point(361, 202);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(55, 18);
             this.lblEstado.TabIndex = 18;
@@ -141,16 +141,16 @@ namespace ProjetoLojaABC
             // 
             // txtCidade
             // 
-            this.txtCidade.Location = new System.Drawing.Point(393, 200);
+            this.txtCidade.Location = new System.Drawing.Point(571, 202);
             this.txtCidade.MaxLength = 100;
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(190, 24);
-            this.txtCidade.TabIndex = 10;
+            this.txtCidade.TabIndex = 11;
             // 
             // lblCidade
             // 
             this.lblCidade.AutoSize = true;
-            this.lblCidade.Location = new System.Drawing.Point(333, 200);
+            this.lblCidade.Location = new System.Drawing.Point(511, 202);
             this.lblCidade.Name = "lblCidade";
             this.lblCidade.Size = new System.Drawing.Size(54, 18);
             this.lblCidade.TabIndex = 16;

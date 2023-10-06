@@ -113,6 +113,7 @@ namespace ProjetoLojaABC
             comm.Connection = Conexao.obterConexao();
             MySqlDataReader DR;
             DR = comm.ExecuteReader();
+
             ltbPesquisar.Items.Clear();
             while (DR.Read())
             {
