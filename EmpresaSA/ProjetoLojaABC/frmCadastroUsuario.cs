@@ -26,8 +26,7 @@ namespace ProjetoLojaABC
         public frmCadastroUsuario()
         {
             InitializeComponent();
-            txtCodigo.Enabled = false;
-            txtCodFunc.Enabled = false;
+            desabilitarCampos();
         }
 
         private void frmCadastroUsuario_Load(object sender, EventArgs e)
@@ -66,6 +65,9 @@ namespace ProjetoLojaABC
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information,
                     MessageBoxDefaultButton.Button1);
+
+                    desabilitarCampos();
+                    limparCampos();
                 }
                 else
                 {
@@ -90,7 +92,73 @@ namespace ProjetoLojaABC
             }
             
         }
+        //limpar campos geral
+        public void limparTudo()
+        {
+            txtCodigo.Clear();
+            txtNome.Clear();
+            txtSenha.Clear();
+            txtRepetirSenha.Clear();
+            lstFuncSemUsu.Items.Clear();
+            txtNome.Focus();
+        }
 
+        // desabilitar campos
+        public void desabilitarCampos()
+        {
+            txtCodigo.Enabled = false;
+            txtNome.Enabled = false;
+            txtSenha.Enabled = false;
+            txtRepetirSenha.Enabled = false;
+
+            btnCadastrar.Enabled = false;
+            btnAlterar.Enabled = false;
+            btnExcluir.Enabled = false;
+            btnLimpar.Enabled = false;
+        }
+        // desabilitar campos novo
+        public void desabilitarCamposNovo()
+        {
+            txtCodigo.Enabled = false;
+            txtNome.Enabled = false;
+            txtSenha.Enabled = false;
+            txtRepetirSenha.Enabled = false;
+
+            btnCadastrar.Enabled = false;
+            btnAlterar.Enabled = false;
+            btnExcluir.Enabled = false;
+            btnLimpar.Enabled = false;
+            btnNovo.Enabled = true;
+            btnNovo.Focus();
+        }
+        // habilitar campos
+        public void habilitarCampos()
+        {
+            txtCodigo.Enabled = false;
+            txtNome.Enabled = true;
+            txtSenha.Enabled = true;
+            txtRepetirSenha.Enabled = true;
+
+            btnCadastrar.Enabled = true;
+            btnAlterar.Enabled = false;
+            btnExcluir.Enabled = false;
+            btnLimpar.Enabled = true;
+            btnNovo.Enabled = false;
+
+            txtNome.Focus();
+        }
+        // criando o método limpar
+
+        public void limparCampos()
+        {
+            txtCodigo.Clear();
+            txtNome.Clear();
+            txtSenha.Clear();
+            txtRepetirSenha.Clear();
+            
+            txtNome.Focus();
+
+        }
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             frmMenuPrincipal abrir = new frmMenuPrincipal();
@@ -117,6 +185,44 @@ namespace ProjetoLojaABC
 
             Conexao.fecharConexao();
         }
+
+        //carrega funcionário sem usuario
+        public void carregaCodigoFuncionarios(string nome) 
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "select codFunc from tbFuncionarios where nome = @nome;";
+            comm.CommandType = CommandType.Text;
+
+            comm.Parameters.Clear();
+            comm.Parameters.Add("@nome", MySqlDbType.VarChar, 100).Value = nome;
+
+            comm.Connection = Conexao.obterConexao();
+            MySqlDataReader DR;
+            DR = comm.ExecuteReader();
+
+            DR.Read();
+
+            txtCodFunc.Text = Convert.ToString(DR.GetString(0));
+
+            Conexao.fecharConexao();
+        }
+        //Carrega o código do usuário
+        public void carregaCodigo()
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "select codUsu+1 from tbUsuarios order by codUsu desc;";
+            comm.CommandType = CommandType.Text;
+
+            comm.Connection = Conexao.obterConexao();
+            MySqlDataReader DR;
+            DR = comm.ExecuteReader();
+            DR.Read();
+
+            txtCodigo.Text = Convert.ToString(DR.GetString(0));
+            
+            Conexao.fecharConexao();
+        }
+
         //Carregar usuarios
         public void carregaUsuario(string nome)
         {
@@ -156,12 +262,17 @@ namespace ProjetoLojaABC
                 txtCodigo.Clear();
                 txtNome.Focus();
 
+                // Carregar o código do funcionário sem usuário 
+
+                carregaCodigoFuncionarios(lstFuncSemUsu.SelectedItem.ToString());
             }
         }
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
+            habilitarCampos();
             carregaFuncionario();
+            carregaCodigo();
         }
 
         private void lstFuncSemUsu_SelectedIndexChanged(object sender, EventArgs e)
@@ -169,6 +280,44 @@ namespace ProjetoLojaABC
             string nome = lstFuncSemUsu.SelectedItem.ToString();
 
             carregaUsuario(nome);
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            limparTudo();
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            if (alterarUsuarios(Convert.ToInt32(txtCodigo.Text)) == 1)
+            {
+                MessageBox.Show("Usuário alterado com sucesso!!", "Mensagem do sistema.",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information,
+                    MessageBoxDefaultButton.Button1);
+
+                desabilitarCampos();
+                limparCampos();
+            }
+                
+        }
+        //Alterar usuário
+        public int alterarUsuarios(int codigo)
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "update into tbUsuarios set usuario = @usuario, senha = @senha where codUsu = @codUsu;";
+            comm.CommandType = CommandType.Text;
+            comm.Parameters.Clear();
+            comm.Parameters.Add("@usuario", MySqlDbType.VarChar, 30).Value = txtNome.Text;
+            comm.Parameters.Add("@senha", MySqlDbType.VarChar, 10).Value = txtSenha.Text;
+            comm.Parameters.Add("@codUsu", MySqlDbType.VarChar, 30).Value = codigo;
+
+            comm.Connection = Conexao.obterConexao();
+
+            int res = comm.ExecuteNonQuery();
+
+            Conexao.fecharConexao();
+
+            return res;
 
         }
     }

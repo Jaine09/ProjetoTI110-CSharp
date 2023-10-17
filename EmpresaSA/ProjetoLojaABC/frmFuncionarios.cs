@@ -93,7 +93,7 @@ namespace ProjetoLojaABC
             btnExcluir.Enabled = false;
             btnLimpar.Enabled = false;
         }
-        // desabilitar campos
+        // desabilitar campos novo
         public void desabilitarCamposNovo()
         {
             txtCodigo.Enabled = false;
