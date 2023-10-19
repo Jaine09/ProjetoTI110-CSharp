@@ -1,0 +1,11 @@
+C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\LStreetwear\LStreetwear\bin\Debug\LStreetwear.exe.config
+C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\LStreetwear\LStreetwear\bin\Debug\LStreetwear.exe
+C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\LStreetwear\LStreetwear\bin\Debug\LStreetwear.pdb
+C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\LStreetwear\LStreetwear\obj\Debug\LStreetwear.csproj.AssemblyReference.cache
+C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\LStreetwear\LStreetwear\obj\Debug\LStreetwear.frmADM.resources
+C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\LStreetwear\LStreetwear\obj\Debug\LStreetwear.frmLoginADM.resources
+C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\LStreetwear\LStreetwear\obj\Debug\LStreetwear.Properties.Resources.resources
+C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\LStreetwear\LStreetwear\obj\Debug\LStreetwear.csproj.GenerateResource.cache
+C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\LStreetwear\LStreetwear\obj\Debug\LStreetwear.csproj.CoreCompileInputs.cache
+C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\LStreetwear\LStreetwear\obj\Debug\LStreetwear.exe
+C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\LStreetwear\LStreetwear\obj\Debug\LStreetwear.pdb
