@@ -46,12 +46,13 @@ namespace LStreetwear
             this.txtPreco = new System.Windows.Forms.TextBox();
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.gpbCrud1 = new System.Windows.Forms.GroupBox();
-            this.gpbCrud2 = new System.Windows.Forms.GroupBox();
-            this.btnAdicionar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
-            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.btnAdicionar = new System.Windows.Forms.Button();
+            this.gpbCrud2 = new System.Windows.Forms.GroupBox();
             this.btnDeletar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
+            this.btnNovo = new System.Windows.Forms.Button();
             this.gpbCrud1.SuspendLayout();
             this.gpbCrud2.SuspendLayout();
             this.SuspendLayout();
@@ -163,7 +164,7 @@ namespace LStreetwear
             // txtQuantidade
             // 
             this.txtQuantidade.Location = new System.Drawing.Point(283, 301);
-            this.txtQuantidade.MaxLength = 10;
+            this.txtQuantidade.MaxLength = 6;
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.Size = new System.Drawing.Size(78, 20);
             this.txtQuantidade.TabIndex = 6;
@@ -194,6 +195,7 @@ namespace LStreetwear
             // 
             // gpbCrud1
             // 
+            this.gpbCrud1.Controls.Add(this.btnNovo);
             this.gpbCrud1.Controls.Add(this.btnAlterar);
             this.gpbCrud1.Controls.Add(this.btnAdicionar);
             this.gpbCrud1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -202,6 +204,28 @@ namespace LStreetwear
             this.gpbCrud1.Size = new System.Drawing.Size(111, 287);
             this.gpbCrud1.TabIndex = 1;
             this.gpbCrud1.TabStop = false;
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.btnAlterar.Location = new System.Drawing.Point(6, 201);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(85, 64);
+            this.btnAlterar.TabIndex = 3;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = false;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            // 
+            // btnAdicionar
+            // 
+            this.btnAdicionar.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.btnAdicionar.Location = new System.Drawing.Point(6, 107);
+            this.btnAdicionar.Name = "btnAdicionar";
+            this.btnAdicionar.Size = new System.Drawing.Size(85, 64);
+            this.btnAdicionar.TabIndex = 2;
+            this.btnAdicionar.Text = "Adicionar";
+            this.btnAdicionar.UseVisualStyleBackColor = false;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // gpbCrud2
             // 
@@ -214,59 +238,50 @@ namespace LStreetwear
             this.gpbCrud2.TabIndex = 10;
             this.gpbCrud2.TabStop = false;
             // 
-            // btnAdicionar
-            // 
-            this.btnAdicionar.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.btnAdicionar.Location = new System.Drawing.Point(16, 41);
-            this.btnAdicionar.Name = "btnAdicionar";
-            this.btnAdicionar.Size = new System.Drawing.Size(85, 64);
-            this.btnAdicionar.TabIndex = 2;
-            this.btnAdicionar.Text = "Adicionar";
-            this.btnAdicionar.UseVisualStyleBackColor = false;
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.btnAlterar.Location = new System.Drawing.Point(16, 176);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(85, 64);
-            this.btnAlterar.TabIndex = 3;
-            this.btnAlterar.Text = "Alterar";
-            this.btnAlterar.UseVisualStyleBackColor = false;
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.btnPesquisar.Location = new System.Drawing.Point(10, 41);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(85, 64);
-            this.btnPesquisar.TabIndex = 11;
-            this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = false;
-            // 
             // btnDeletar
             // 
             this.btnDeletar.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.btnDeletar.Location = new System.Drawing.Point(10, 176);
+            this.btnDeletar.Location = new System.Drawing.Point(10, 198);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(85, 64);
             this.btnDeletar.TabIndex = 12;
             this.btnDeletar.Text = "Deletar";
             this.btnDeletar.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnPesquisar
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Window;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(25, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 37);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "&Voltar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnPesquisar.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.btnPesquisar.Location = new System.Drawing.Point(10, 26);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(85, 64);
+            this.btnPesquisar.TabIndex = 11;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = false;
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.BackColor = System.Drawing.SystemColors.Window;
+            this.btnVoltar.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltar.Image")));
+            this.btnVoltar.Location = new System.Drawing.Point(25, 12);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(95, 37);
+            this.btnVoltar.TabIndex = 13;
+            this.btnVoltar.Text = "&Voltar";
+            this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnNovo
+            // 
+            this.btnNovo.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.btnNovo.Location = new System.Drawing.Point(6, 26);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(85, 64);
+            this.btnNovo.TabIndex = 4;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.UseVisualStyleBackColor = false;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // frmADM
             // 
@@ -274,7 +289,7 @@ namespace LStreetwear
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(880, 457);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.gpbCrud2);
             this.Controls.Add(this.gpbCrud1);
             this.Controls.Add(this.txtMarca);
@@ -329,6 +344,7 @@ namespace LStreetwear
         private System.Windows.Forms.GroupBox gpbCrud2;
         private System.Windows.Forms.Button btnDeletar;
         private System.Windows.Forms.Button btnPesquisar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Button btnNovo;
     }
 }
