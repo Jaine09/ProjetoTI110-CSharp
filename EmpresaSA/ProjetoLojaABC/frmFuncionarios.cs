@@ -406,5 +406,10 @@ namespace ProjetoLojaABC
                 }
             }
         }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -143,5 +143,10 @@ namespace ProjetoLojaABC
             }
 
         }
+
+        private void gpbPesquisar_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

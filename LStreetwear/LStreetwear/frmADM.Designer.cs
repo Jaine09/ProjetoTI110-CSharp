@@ -46,13 +46,15 @@ namespace LStreetwear
             this.txtPreco = new System.Windows.Forms.TextBox();
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.gpbCrud1 = new System.Windows.Forms.GroupBox();
+            this.btnNovo = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.gpbCrud2 = new System.Windows.Forms.GroupBox();
             this.btnDeletar = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
-            this.btnNovo = new System.Windows.Forms.Button();
+            this.txtCodUsu = new System.Windows.Forms.TextBox();
+            this.lblCodUsu = new System.Windows.Forms.Label();
             this.gpbCrud1.SuspendLayout();
             this.gpbCrud2.SuspendLayout();
             this.SuspendLayout();
@@ -61,7 +63,7 @@ namespace LStreetwear
             // 
             this.lblCodProd.AutoSize = true;
             this.lblCodProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodProd.Location = new System.Drawing.Point(126, 129);
+            this.lblCodProd.Location = new System.Drawing.Point(124, 129);
             this.lblCodProd.Name = "lblCodProd";
             this.lblCodProd.Size = new System.Drawing.Size(151, 18);
             this.lblCodProd.TabIndex = 0;
@@ -148,7 +150,7 @@ namespace LStreetwear
             // txtCodProd
             // 
             this.txtCodProd.Enabled = false;
-            this.txtCodProd.Location = new System.Drawing.Point(283, 129);
+            this.txtCodProd.Location = new System.Drawing.Point(281, 129);
             this.txtCodProd.Name = "txtCodProd";
             this.txtCodProd.Size = new System.Drawing.Size(78, 20);
             this.txtCodProd.TabIndex = 9;
@@ -205,6 +207,17 @@ namespace LStreetwear
             this.gpbCrud1.TabIndex = 1;
             this.gpbCrud1.TabStop = false;
             // 
+            // btnNovo
+            // 
+            this.btnNovo.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.btnNovo.Location = new System.Drawing.Point(6, 26);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(85, 64);
+            this.btnNovo.TabIndex = 4;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.UseVisualStyleBackColor = false;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
+            // 
             // btnAlterar
             // 
             this.btnAlterar.BackColor = System.Drawing.SystemColors.HighlightText;
@@ -257,6 +270,7 @@ namespace LStreetwear
             this.btnPesquisar.TabIndex = 11;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // btnVoltar
             // 
@@ -272,16 +286,23 @@ namespace LStreetwear
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnNovo
+            // txtCodUsu
             // 
-            this.btnNovo.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.btnNovo.Location = new System.Drawing.Point(6, 26);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(85, 64);
-            this.btnNovo.TabIndex = 4;
-            this.btnNovo.Text = "Novo";
-            this.btnNovo.UseVisualStyleBackColor = false;
-            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
+            this.txtCodUsu.Enabled = false;
+            this.txtCodUsu.Location = new System.Drawing.Point(642, 368);
+            this.txtCodUsu.Name = "txtCodUsu";
+            this.txtCodUsu.Size = new System.Drawing.Size(80, 20);
+            this.txtCodUsu.TabIndex = 15;
+            // 
+            // lblCodUsu
+            // 
+            this.lblCodUsu.AutoSize = true;
+            this.lblCodUsu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodUsu.Location = new System.Drawing.Point(491, 372);
+            this.lblCodUsu.Name = "lblCodUsu";
+            this.lblCodUsu.Size = new System.Drawing.Size(150, 18);
+            this.lblCodUsu.TabIndex = 14;
+            this.lblCodUsu.Text = "Código do Usuário";
             // 
             // frmADM
             // 
@@ -289,6 +310,8 @@ namespace LStreetwear
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(880, 457);
+            this.Controls.Add(this.txtCodUsu);
+            this.Controls.Add(this.lblCodUsu);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.gpbCrud2);
             this.Controls.Add(this.gpbCrud1);
@@ -346,5 +369,7 @@ namespace LStreetwear
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnNovo;
+        private System.Windows.Forms.TextBox txtCodUsu;
+        private System.Windows.Forms.Label lblCodUsu;
     }
 }

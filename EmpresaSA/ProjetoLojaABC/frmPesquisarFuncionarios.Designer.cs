@@ -54,6 +54,7 @@ namespace ProjetoLojaABC
             this.gpbPesquisar.TabIndex = 0;
             this.gpbPesquisar.TabStop = false;
             this.gpbPesquisar.Text = "Pesquisar por:";
+            this.gpbPesquisar.Enter += new System.EventHandler(this.gpbPesquisar_Enter);
             // 
             // lblDescricao
             // 

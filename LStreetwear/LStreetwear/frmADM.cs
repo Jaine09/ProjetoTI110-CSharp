@@ -26,6 +26,7 @@ namespace LStreetwear
         {
             InitializeComponent();
             habilitarInicial();
+            codigoUsuario();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -46,7 +47,7 @@ namespace LStreetwear
         public void habilitar()
         {
             btnAdicionar.Enabled = true;
-            btnAlterar.Enabled = true;
+            btnAlterar.Enabled = false;
             btnPesquisar.Enabled = true;
             btnDeletar.Enabled = false;
 
@@ -78,10 +79,10 @@ namespace LStreetwear
             btnAdicionar.Focus();
         }
         // Para o botão adicionar
-        public int adicionarProduto()
+        public int adicionarProduto(int codUsu)
         {
             MySqlCommand comm = new MySqlCommand();
-            comm.CommandText = "insert into tbProdutos(nomeProd,marcaProd,quantidade,tamanho,dataRepo,preco)values(@nomeProd,@marcaProd,@quantidade,@tamanho,@dataRepo,@preco);";
+            comm.CommandText = "insert into tbProdutos(nomeProd,marcaProd,quantidade,tamanho,dataRepo,preco,codUsu)values(@nomeProd,@marcaProd,@quantidade,@tamanho,@dataRepo,@preco,@codUsu);";
             comm.CommandType = CommandType.Text;
 
             comm.Parameters.Clear();
@@ -91,6 +92,7 @@ namespace LStreetwear
             comm.Parameters.Add("@tamanho", MySqlDbType.VarChar, 2).Value = txtTamanho.Text;
             comm.Parameters.Add("@dataRepo", MySqlDbType.Date).Value = Convert.ToDateTime(dtpDataRepo.Text);
             comm.Parameters.Add("@preco", MySqlDbType.Decimal, 10).Value = txtPreco.Text;
+            comm.Parameters.Add("@codUsu", MySqlDbType.Int32, 11).Value = codUsu;
 
             comm.Connection = Conexao.conectar();
 
@@ -101,6 +103,23 @@ namespace LStreetwear
             return res;
             
         }
+        public void codigoUsuario()
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "select codUsu from tblogin;";
+            comm.CommandType = CommandType.Text;
+
+            comm.Connection = Conexao.conectar();
+            MySqlDataReader DR;
+            DR = comm.ExecuteReader();
+            DR.Read();
+
+            txtCodUsu.Text = Convert.ToString(DR.GetString(0));
+
+            Conexao.desconectar();
+
+        }
+
         //Carregar código
         public void codigoProduto()
         {
@@ -129,7 +148,7 @@ namespace LStreetwear
            }
             else
             {
-               if (adicionarProduto() == 1)
+               if (adicionarProduto(Convert.ToInt32(txtCodUsu.Text)) == 1)
                 {
                 MessageBox.Show("Produto adicionado com sucesso", "Mensagem do Sistema",
                     MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
@@ -160,10 +179,47 @@ namespace LStreetwear
             habilitar();
             codigoProduto();
         }
+        //Alterar algo do produto
+        public int alterarProduto(int codUsu)
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "update tbProdutos set nomeProd = @nomeProd, marcaProd = @marcaProd, quantidade = @quantidade, tamanho = @tamanho, dataRepo = @dataRepo, preco = @preco where codUsu = @codUsu;";
+            comm.CommandType = CommandType.Text;
+
+            comm.Parameters.Clear();
+            comm.Parameters.Add("@nomeProd", MySqlDbType.VarChar, 100).Value = txtNomeProd.Text;
+            comm.Parameters.Add("@marcaProd", MySqlDbType.VarChar, 100).Value = txtMarca.Text;
+            comm.Parameters.Add("@quantidade", MySqlDbType.Int32, 50).Value = txtQuantidade.Text;
+            comm.Parameters.Add("@tamanho", MySqlDbType.VarChar, 2).Value = txtTamanho.Text;
+            comm.Parameters.Add("@dataRepo", MySqlDbType.Date).Value = Convert.ToDateTime(dtpDataRepo.Text);
+            comm.Parameters.Add("@preco", MySqlDbType.Decimal, 10).Value = txtPreco.Text;
+            comm.Parameters.Add("@codUsu", MySqlDbType.Int32, 11).Value = codUsu;
+
+            int res = comm.ExecuteNonQuery();
+            Conexao.desconectar();
+            return res;
+
+        }
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
+            if(alterarProduto(Convert.ToInt32(txtCodUsu.Text)) == 1)
+            {
+                MessageBox.Show("Produto alterado com sucesso", "Mensagem do Sistema",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+            }
+            else
+            {
+                MessageBox.Show("Não foi possível alterar", "Mensagem do Sistema",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+            }
+        }
 
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            frmPesquisaProd abrir = new frmPesquisaProd();
+            abrir.Show();
+            this.Hide();
         }
     }
 }

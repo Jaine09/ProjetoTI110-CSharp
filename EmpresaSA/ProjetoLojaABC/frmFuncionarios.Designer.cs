@@ -34,9 +34,9 @@ namespace ProjetoLojaABC
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.lblBairro = new System.Windows.Forms.Label();
             this.cbbEstado = new System.Windows.Forms.ComboBox();
-            this.lblEstado = new System.Windows.Forms.Label();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.lblCidade = new System.Windows.Forms.Label();
+            this.lblEstado = new System.Windows.Forms.Label();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.lblNumero = new System.Windows.Forms.Label();
             this.lblCEP = new System.Windows.Forms.Label();
@@ -130,15 +130,6 @@ namespace ProjetoLojaABC
             this.cbbEstado.Size = new System.Drawing.Size(64, 26);
             this.cbbEstado.TabIndex = 10;
             // 
-            // lblEstado
-            // 
-            this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(361, 202);
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(55, 18);
-            this.lblEstado.TabIndex = 18;
-            this.lblEstado.Text = "Estado";
-            // 
             // txtCidade
             // 
             this.txtCidade.Location = new System.Drawing.Point(571, 202);
@@ -155,6 +146,15 @@ namespace ProjetoLojaABC
             this.lblCidade.Size = new System.Drawing.Size(54, 18);
             this.lblCidade.TabIndex = 16;
             this.lblCidade.Text = "Cidade";
+            // 
+            // lblEstado
+            // 
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Location = new System.Drawing.Point(361, 202);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(55, 18);
+            this.lblEstado.TabIndex = 18;
+            this.lblEstado.Text = "Estado";
             // 
             // txtNumero
             // 
@@ -283,6 +283,7 @@ namespace ProjetoLojaABC
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(100, 24);
             this.txtCodigo.TabIndex = 1;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // lblCodigo
             // 
