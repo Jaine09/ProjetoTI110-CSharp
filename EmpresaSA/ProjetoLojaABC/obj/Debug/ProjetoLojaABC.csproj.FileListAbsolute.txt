@@ -38,3 +38,10 @@ C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\EmpresaSA\Projet
 C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\EmpresaSA\ProjetoLojaABC\obj\Debug\ProjetoLojaABC.csproj.CopyComplete
 C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\EmpresaSA\ProjetoLojaABC\obj\Debug\ProjetoLojaABC.frmCadastroUsuario.resources
 C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\EmpresaSA\ProjetoLojaABC\obj\Debug\ProjetoLojaABC.frmPesquisarUsuarios.resources
+C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\EmpresaSA\ProjetoLojaABC\obj\Debug\ProjetoLojaABC.frmWebCam.resources
+C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\EmpresaSA\ProjetoLojaABC\bin\Debug\AForge.dll
+C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\EmpresaSA\ProjetoLojaABC\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\EmpresaSA\ProjetoLojaABC\bin\Debug\AForge.Video.dll
+C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\EmpresaSA\ProjetoLojaABC\bin\Debug\AForge.xml
+C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\EmpresaSA\ProjetoLojaABC\bin\Debug\AForge.Video.xml
+C:\Users\jaine.jcosta\Documents\Visual Studio 2019\ProjetoTI110\EmpresaSA\ProjetoLojaABC\bin\Debug\AForge.Video.DirectShow.xml

@@ -168,7 +168,7 @@ namespace LStreetwear
 
         private void rdbNProduto_CheckedChanged(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
