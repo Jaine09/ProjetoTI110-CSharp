@@ -91,6 +91,18 @@
     <Compile Include="frmADM.Designer.cs">
       <DependentUpon>frmADM.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFuncionario.Designer.cs">
+      <DependentUpon>frmFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInicial.Designer.cs">
+      <DependentUpon>frmInicial.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLoginADM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,10 +115,25 @@
     <Compile Include="frmPesquisaProd.Designer.cs">
       <DependentUpon>frmPesquisaProd.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAvaliacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAvaliacao.Designer.cs">
+      <DependentUpon>frmAvaliacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmADM.resx">
       <DependentUpon>frmADM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAvaliacao.resx">
+      <DependentUpon>frmAvaliacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFuncionario.resx">
+      <DependentUpon>frmFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInicial.resx">
+      <DependentUpon>frmInicial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLoginADM.resx">
       <DependentUpon>frmLoginADM.cs</DependentUpon>

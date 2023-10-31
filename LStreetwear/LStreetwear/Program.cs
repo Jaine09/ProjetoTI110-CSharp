@@ -16,7 +16,7 @@ namespace LStreetwear
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLoginADM());
+            Application.Run(new frmInicial());
         }
     }
 }

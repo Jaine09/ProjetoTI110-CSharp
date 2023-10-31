@@ -35,7 +35,7 @@ namespace LStreetwear
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.btnEntrar = new System.Windows.Forms.Button();
-            this.btnSair = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -91,17 +91,17 @@ namespace LStreetwear
             this.btnEntrar.UseVisualStyleBackColor = false;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
-            // btnSair
+            // btnVoltar
             // 
-            this.btnSair.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(514, 328);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(102, 43);
-            this.btnSair.TabIndex = 4;
-            this.btnSair.Text = "&Sair";
-            this.btnSair.UseVisualStyleBackColor = false;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            this.btnVoltar.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltar.Location = new System.Drawing.Point(514, 328);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(102, 43);
+            this.btnVoltar.TabIndex = 4;
+            this.btnVoltar.Text = "&Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // pictureBox1
             // 
@@ -120,7 +120,7 @@ namespace LStreetwear
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnSair);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtUsuario);
@@ -146,7 +146,7 @@ namespace LStreetwear
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Button btnEntrar;
-        private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

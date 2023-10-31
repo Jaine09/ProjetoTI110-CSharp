@@ -53,7 +53,9 @@ namespace LStreetwear
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            frmInicial abrir = new frmInicial();
+            abrir.Show();
+            this.Hide();
         }
 
         private void frmLoginADM_Load(object sender, EventArgs e)

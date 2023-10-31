@@ -72,6 +72,15 @@ namespace LStreetwear
             btnLimpar.Enabled = true;
         }
 
+        public void habilitarNomeMarca()
+        {
+            cbbMarca.Enabled = false;
+            txtNomeCod.Enabled = true;
+            ltbProdutos.Enabled = true;
+            btnPesquisar.Enabled = true;
+            btnLimpar.Enabled = true;
+        }
+
         // Pesquisar por código
         public void pesquisaCodigo(int cod)
         {
@@ -168,7 +177,7 @@ namespace LStreetwear
 
         private void rdbNProduto_CheckedChanged(object sender, EventArgs e)
         {
-            
+            habilitarNomeMarca();
         }
     }
 }
