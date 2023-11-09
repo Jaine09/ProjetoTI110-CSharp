@@ -27,27 +27,38 @@ namespace LStreetwear
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            double valor, qualidade;
+            calcular();
+            comissao(Convert.ToInt32(txtCod.Text));
+        }
+
+        public void calcular()
+        {
+            double valor, qualidade = 0, total = 0;
+            int indice = 0;
             try
             {
-                valor = Convert.ToDouble(txtValorCompra);
-                qualidade = Convert.ToDouble(cbbQualidade);
+                valor = Convert.ToDouble(txtValorCompra.Text);
+                qualidade = Convert.ToInt32(cbbQualidade.SelectedIndex);
 
-                if (Convert.ToString(cbbQualidade.SelectedItem) == "Excelente")
+                if (indice == 0)
                 {
-                    qualidade = valor* 1.10/100;
+                    qualidade = valor * 10 / 100;
+                    total = qualidade + valor;
                 }
-                if (Convert.ToString(cbbQualidade.SelectedItem) == "Ótimo")
+                if (indice == 1)
                 {
-                    qualidade = valor*1.8/100;
+                    qualidade = valor * 8 / 100;
+                    total = qualidade + valor;
                 }
-                if (Convert.ToString(cbbQualidade.SelectedItem) == "Bom")
+                if (indice == 2)
                 {
-                    qualidade = valor*1.5/100;
+                    qualidade = valor * 5 / 100;
+                    total = qualidade + valor;
                 }
-                if (Convert.ToString(cbbQualidade.SelectedItem) == "Ruim")
+                if (indice == 3)
                 {
-                    qualidade = valor*1.2/100;
+                    qualidade = valor * 2 / 100;
+                    total = qualidade + valor;
                 }
             }
             catch (Exception)
@@ -56,37 +67,63 @@ namespace LStreetwear
                     "Mensagem do Sistema");
 
             }
-        }
 
-        private void txtComissao_TextChanged(object sender, EventArgs e)
+            txtComissao.Text = qualidade.ToString();
+            txtTotal.Text = total.ToString();
+        }
+        public void limparCampos()
         {
-            //valorComissao(comissao);
+            txtCliente.Clear();
+            txtFunc.Clear();
+            txtCod.Clear();
+            txtValorCompra.Clear();
+            txtComissao.Clear();
+            txtTotal.Clear();
+
+            txtCliente.Focus();
         }
 
-        // valor da comissão
-        public string valorComissao(int comissao)
+        private void btnLimpar_Click(object sender, EventArgs e)
         {
-            int valor = Convert.ToInt32(txtValorCompra);
-            comissao = Convert.ToInt32(txtComissao);
-
-            if (Convert.ToString(cbbQualidade.SelectedItem) == "Excelente- 10%")
-            {
-                comissao = Convert.ToInt32(valor * 1.10);
-            }
-            if (Convert.ToString(cbbQualidade.SelectedItem) == "Ótimo- 8%")
-            {
-                comissao = Convert.ToInt32(valor * 1.8);
-            }
-            if (Convert.ToString(cbbQualidade.SelectedItem) == "Bom- 5%")
-            {
-                comissao = Convert.ToInt32(valor * 1.5) ;
-            }
-            if (Convert.ToString(cbbQualidade.SelectedItem) == "Ruim- 2%")
-            {
-                comissao = Convert.ToInt32(valor * 1.2);
-            }
-
-            return Convert.ToString(comissao);
+            limparCampos();
         }
+
+        public void nomefuncionario()
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "select codFunc from tbFuncionario where nomeFunc = @nomeFunc";
+            comm.CommandType = CommandType.Text;
+
+            comm.Connection = Conexao.conectar();
+            MySqlDataReader DR;
+            DR = comm.ExecuteReader();
+            DR.Read();
+
+            txtCod.Text = Convert.ToString(DR.GetInt32(0));
+
+        }
+
+        //public int comissao(int codFunc)
+        //{
+        //    MySqlCommand comm = new MySqlCommand();
+        //    comm.CommandText = "insert into tbComissao(codFunc,nomeCliente,dataCompra,valorCompra,qualidade,valorComissao,valorTotal)values(@codFunc,@nomeCliente,@dataCompra,@valorCompra,@qualidade,@valorComissao,@valorTotal);";
+        //    comm.CommandType = CommandType.Text;
+
+        //    comm.Parameters.Clear();
+        //    comm.Parameters.Add("@codFunc", MySqlDbType.Int32, 11).Value = codFunc;
+        //    comm.Parameters.Add("@nomeCliente", MySqlDbType.Text, 100).Value = txtCliente.Text;
+        //    comm.Parameters.Add("@dataCompra", MySqlDbType.Date).Value = Convert.ToDateTime(dtpCompra.Text);
+        //    comm.Parameters.Add("@valorCompra", MySqlDbType.Int32, 18).Value = txtValorCompra.Text;
+        //    comm.Parameters.Add("@qualidade", MySqlDbType.Text, 10).Value = cbbQualidade.Text;
+        //    comm.Parameters.Add("@valorComissao", MySqlDbType.Decimal, 18).Value = txtComissao.Text;
+        //    comm.Parameters.Add("valorTotal", MySqlDbType.Decimal, 18).Value = txtValorCompra.Text;
+
+        //    comm.Connection = Conexao.conectar();
+
+        //    int res = comm.ExecuteNonQuery();
+
+        //    Conexao.desconectar();
+        //    return res;
+        //}
     }
 }

@@ -143,6 +143,7 @@ namespace ProjetoLojaABC
             this.lblTotal.Size = new System.Drawing.Size(158, 64);
             this.lblTotal.TabIndex = 0;
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTotal.Click += new System.EventHandler(this.lblTotal_Click);
             // 
             // btnCalcular
             // 

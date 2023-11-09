@@ -135,5 +135,10 @@ namespace ProjetoLojaABC
             //Executar o método/função limpar campos
             limparCampos();
         }
+
+        private void lblTotal_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

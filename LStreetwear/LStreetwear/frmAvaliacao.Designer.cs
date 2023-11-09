@@ -48,6 +48,7 @@ namespace LStreetwear
             this.dtpCompra = new System.Windows.Forms.DateTimePicker();
             this.lblCompra = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblCliente
@@ -136,11 +137,11 @@ namespace LStreetwear
             // 
             this.btnCalcular.BackColor = System.Drawing.SystemColors.HighlightText;
             this.btnCalcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcular.Location = new System.Drawing.Point(308, 246);
+            this.btnCalcular.Location = new System.Drawing.Point(310, 217);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(147, 43);
             this.btnCalcular.TabIndex = 6;
-            this.btnCalcular.Text = "Calcular Comissão";
+            this.btnCalcular.Text = "&Calcular Comissão";
             this.btnCalcular.UseVisualStyleBackColor = false;
             this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
@@ -163,7 +164,6 @@ namespace LStreetwear
             this.txtComissao.Name = "txtComissao";
             this.txtComissao.Size = new System.Drawing.Size(222, 24);
             this.txtComissao.TabIndex = 10;
-            this.txtComissao.TextChanged += new System.EventHandler(this.txtComissao_TextChanged);
             // 
             // lblTotal
             // 
@@ -188,10 +188,10 @@ namespace LStreetwear
             // lblCod
             // 
             this.lblCod.AutoSize = true;
-            this.lblCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCod.Location = new System.Drawing.Point(528, 109);
             this.lblCod.Name = "lblCod";
-            this.lblCod.Size = new System.Drawing.Size(36, 18);
+            this.lblCod.Size = new System.Drawing.Size(39, 18);
             this.lblCod.TabIndex = 13;
             this.lblCod.Text = "Cód";
             // 
@@ -208,7 +208,7 @@ namespace LStreetwear
             // 
             this.dtpCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpCompra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpCompra.Location = new System.Drawing.Point(651, 65);
+            this.dtpCompra.Location = new System.Drawing.Point(665, 65);
             this.dtpCompra.Name = "dtpCompra";
             this.dtpCompra.Size = new System.Drawing.Size(102, 24);
             this.dtpCompra.TabIndex = 2;
@@ -216,10 +216,10 @@ namespace LStreetwear
             // lblCompra
             // 
             this.lblCompra.AutoSize = true;
-            this.lblCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompra.Location = new System.Drawing.Point(528, 65);
             this.lblCompra.Name = "lblCompra";
-            this.lblCompra.Size = new System.Drawing.Size(117, 18);
+            this.lblCompra.Size = new System.Drawing.Size(131, 18);
             this.lblCompra.TabIndex = 16;
             this.lblCompra.Text = "&Data da Compra";
             // 
@@ -237,12 +237,25 @@ namespace LStreetwear
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
+            // btnLimpar
+            // 
+            this.btnLimpar.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpar.Location = new System.Drawing.Point(310, 275);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(147, 43);
+            this.btnLimpar.TabIndex = 17;
+            this.btnLimpar.Text = "&Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
             // frmAvaliacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(800, 381);
+            this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.lblCompra);
             this.Controls.Add(this.dtpCompra);
@@ -291,5 +304,6 @@ namespace LStreetwear
         private System.Windows.Forms.DateTimePicker dtpCompra;
         private System.Windows.Forms.Label lblCompra;
         private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Button btnLimpar;
     }
 }

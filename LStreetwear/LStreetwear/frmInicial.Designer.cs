@@ -104,6 +104,8 @@ namespace LStreetwear
             this.Controls.Add(this.btnFuncionário);
             this.Controls.Add(this.btnAdm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmInicial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

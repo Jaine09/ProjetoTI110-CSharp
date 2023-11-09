@@ -133,6 +133,7 @@ namespace LStreetwear
             this.btnAlterar.Text = "&Alterar";
             this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAlterar.UseVisualStyleBackColor = false;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnCadastrar
             // 
@@ -217,7 +218,7 @@ namespace LStreetwear
             // 
             // mskCPF
             // 
-            this.mskCPF.Location = new System.Drawing.Point(371, 139);
+            this.mskCPF.Location = new System.Drawing.Point(371, 133);
             this.mskCPF.Mask = "999,999,999-99";
             this.mskCPF.Name = "mskCPF";
             this.mskCPF.Size = new System.Drawing.Size(108, 24);
@@ -226,7 +227,7 @@ namespace LStreetwear
             // lblCPF
             // 
             this.lblCPF.AutoSize = true;
-            this.lblCPF.Location = new System.Drawing.Point(327, 145);
+            this.lblCPF.Location = new System.Drawing.Point(327, 139);
             this.lblCPF.Name = "lblCPF";
             this.lblCPF.Size = new System.Drawing.Size(38, 18);
             this.lblCPF.TabIndex = 4;
@@ -251,10 +252,11 @@ namespace LStreetwear
             // 
             // txtCodigo
             // 
+            this.txtCodigo.Enabled = false;
             this.txtCodigo.Location = new System.Drawing.Point(69, 32);
             this.txtCodigo.MaxLength = 5;
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(100, 24);
+            this.txtCodigo.Size = new System.Drawing.Size(63, 24);
             this.txtCodigo.TabIndex = 1;
             // 
             // lblCodigo
