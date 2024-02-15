@@ -16,6 +16,7 @@ namespace LStreetwear
         public frmAvaliacao()
         {
             InitializeComponent();
+            
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -28,7 +29,7 @@ namespace LStreetwear
         private void btnCalcular_Click(object sender, EventArgs e)
         {
             calcular();
-            comissao(Convert.ToInt32(txtCod.Text));
+            //nomefuncionario();
         }
 
         public void calcular()
@@ -100,6 +101,8 @@ namespace LStreetwear
             DR.Read();
 
             txtCod.Text = Convert.ToString(DR.GetInt32(0));
+
+            Conexao.desconectar();
 
         }
 

@@ -120,7 +120,9 @@ namespace LStreetwear
             DR.Read();
             ltbProdutos.Items.Clear();
 
+            while (DR.Read()){ 
             ltbProdutos.SelectedItems.Add(DR.GetString(0));
+            }
 
             Conexao.desconectar();
         }
@@ -178,6 +180,25 @@ namespace LStreetwear
         private void rdbNProduto_CheckedChanged(object sender, EventArgs e)
         {
             habilitarNomeMarca();
+        }
+
+        private void ltbProdutos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ltbProdutos.SelectedItem == null)
+            {
+                MessageBox.Show("Favor selecionar um item",
+                    "Mensagem do sistema",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error,
+                    MessageBoxDefaultButton.Button1);
+            }
+            else
+            {
+                string produto = ltbProdutos.SelectedItem.ToString();
+                frmADM abrir = new frmADM();
+                abrir.Show();
+                this.Hide();
+            }
         }
     }
 }

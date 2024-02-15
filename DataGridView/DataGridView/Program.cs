@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProjetoLojaABC
+namespace DataGridView
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace ProjetoLojaABC
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMenuPrincipal());
+            Application.Run(new Form1());
         }
     }
 }

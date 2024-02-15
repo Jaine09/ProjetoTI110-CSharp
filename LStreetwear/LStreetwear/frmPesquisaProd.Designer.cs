@@ -114,6 +114,7 @@ namespace LStreetwear
             this.ltbProdutos.Name = "ltbProdutos";
             this.ltbProdutos.Size = new System.Drawing.Size(405, 166);
             this.ltbProdutos.TabIndex = 5;
+            this.ltbProdutos.SelectedIndexChanged += new System.EventHandler(this.ltbProdutos_SelectedIndexChanged);
             // 
             // btnVoltar
             // 
